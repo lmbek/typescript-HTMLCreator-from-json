@@ -6,5 +6,5 @@ import DOM from "../src/wireframe/DOM.json";
 
 ( ()=>{
     // Create a new Wireframe instance with the 'html' data
-    new Wireframe(DOM.html as HTMLTreeNode);
+    return new Wireframe(DOM.html as HTMLTreeNode);
 } )();
