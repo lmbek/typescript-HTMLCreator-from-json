@@ -13,7 +13,7 @@ export class Wireframe {
 
     insertHTML(parent: HTMLElement, DOM: HTMLTreeNode) {
         // for each child we add the attributes, add the innerText and add the children elements
-        DOM.children?.forEach((elem: any) => {
+        DOM.children?.forEach((elem: HTMLTreeNode) => {
             const element = document.createElement(elem.tag) as HTMLElement;
 
             // add attributes to this element
