@@ -1,0 +1,45 @@
+{
+    "html": {
+        "tag":"body",
+        "attributes": {"id": "body"},
+        "children":[
+            {
+                "tag":"header",
+                "attributes": {"id": "my-header"},
+                "children":[
+                    {
+                        "tag":"div",
+                        "attributes": {"class": "something"},
+                        "innerText": "dette er en test",
+                        "children": null
+                    }
+                ]
+            },
+            {
+                "tag":"main",
+                "children":[
+                    {
+                        "tag":"section",
+                        "attributes": {"id": "container",
+                            "class": "test2", "contenteditable": "true"
+                        },
+                        "innerText": "Hello World",
+                        "children":[
+                            {"tag":"div",
+                                "attributes": {"class": "bob bob2"}
+                            },
+                            {"tag":"div"},
+                            {"tag":"div"}
+                        ]
+                    }
+                ]
+            },
+            {
+                "tag":"footer",
+                "children":[
+
+                ]
+            }
+        ]
+    }
+}
