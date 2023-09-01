@@ -1,14 +1,14 @@
 {
     "html": {
-        "tag": "body",
+        "tagName": "body",
         "attributes": { "id": "body" },
         "children": [
             {
-                "tag": "header",
+                "tagName": "header",
                 "attributes": { "id": "my-header" },
                 "children": [
                     {
-                        "tag": "div",
+                        "tagName": "div",
                         "attributes": { "class": "something" },
                         "innerText": "dette er en test",
                         "children": null
@@ -16,10 +16,10 @@
                 ]
             },
             {
-                "tag": "main",
+                "tagName": "main",
                 "children": [
                     {
-                        "tag": "section",
+                        "tagName": "section",
                         "attributes": {
                             "id": "container",
                             "class": "test2",
@@ -28,17 +28,17 @@
                         "innerText": "Hello World",
                         "children": [
                             {
-                                "tag": "div",
+                                "tagName": "div",
                                 "attributes": { "class": "bob bob2" }
                             },
-                            { "tag": "div" },
-                            { "tag": "div" }
+                            { "tagName": "div" },
+                            { "tagName": "div" }
                         ]
                     }
                 ]
             },
             {
-                "tag": "footer",
+                "tagName": "footer",
                 "children": []
             }
         ]
