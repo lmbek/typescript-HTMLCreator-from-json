@@ -1,4 +1,4 @@
-export type HTMLTreeNode = {
+type HTMLTreeNode = {
     tag: string;
     attributes?: Record<string, string>;
     innerText?: string;
