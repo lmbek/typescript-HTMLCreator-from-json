@@ -1,10 +1,4 @@
-type HTMLTreeNode = {
-    tag: string;
-    attributes?: Record<string, string>;
-    text?: string;
-    children?: HTMLTreeNode[] | null;
-};
-
+import {HTMLTreeNode} from "./type/types.ts"
 
 export class Wireframe {
     constructor(data: HTMLTreeNode) {

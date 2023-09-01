@@ -1,11 +1,6 @@
-export interface Content {
-    name: string;
-    img: string;
-    information: Information;
-    text: string;
-}
-
-export interface Information {
-    strength: number;
-    lives: number;
-}
+export type HTMLTreeNode = {
+    tag: string;
+    attributes?: Record<string, string>;
+    innerText?: string;
+    children?: HTMLTreeNode[] | null;
+};

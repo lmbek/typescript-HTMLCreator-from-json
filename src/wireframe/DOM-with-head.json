@@ -1,0 +1,69 @@
+{
+    "html": {
+        "tag": "html",
+        "attributes": {},
+        "children": [
+            {
+                "tag": "head",
+                "attributes": {},
+                "children": [
+                    {
+                        "tag": "meta",
+                        "attributes": { "charset": "UTF-8" }
+                    },
+                    {
+                        "tag": "meta",
+                        "attributes": { "name": "viewport", "content": "width=device-width, initial-scale=1.0" }
+                    },
+                    {
+                        "tag": "title",
+                        "innerText": "Your Page Title"
+                    }
+                ]
+            },
+            {
+                "tag": "body",
+                "attributes": { "id": "body" },
+                "children": [
+                    {
+                        "tag": "header",
+                        "attributes": { "id": "my-header" },
+                        "children": [
+                            {
+                                "tag": "div",
+                                "attributes": { "class": "something" },
+                                "innerText": "dette er en test"
+                            }
+                        ]
+                    },
+                    {
+                        "tag": "main",
+                        "children": [
+                            {
+                                "tag": "section",
+                                "attributes": {
+                                    "id": "container",
+                                    "class": "test2",
+                                    "contenteditable": "true"
+                                },
+                                "innerText": "Hello World",
+                                "children": [
+                                    {
+                                        "tag": "div",
+                                        "attributes": { "class": "bob bob2" }
+                                    },
+                                    { "tag": "div" },
+                                    { "tag": "div" }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "tag": "footer",
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    }
+}
