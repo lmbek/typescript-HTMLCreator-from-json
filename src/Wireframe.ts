@@ -1,8 +1,8 @@
 type HTMLTreeNode = {
     tag: string;
     attributes?: Record<string, string>;
-    innerText?: string;
-    children?: HTMLTreeNode[];
+    text?: string;
+    children?: HTMLTreeNode[] | null;
 };
 
 
@@ -12,6 +12,7 @@ export class Wireframe {
     }
 
     insertHTML(parent: HTMLElement, DOM: HTMLTreeNode) {
+        // != null is equivalent to DOM.children?.forEach
         if (DOM.children != null) {
             DOM.children.forEach((elem: any) => {
                 const element = document.createElement(elem.tag) as HTMLElement;
