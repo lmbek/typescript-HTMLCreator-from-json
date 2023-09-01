@@ -1,5 +1,5 @@
 type HTMLTreeNode = {
-    tag: string;
+    tagName: string;
     attributes?: Record<string, string>;
     innerText?: string;
     children?: HTMLTreeNode[] | null;
@@ -11,29 +11,29 @@ export class Wireframe {
         this.insertHTML(document.body, data);
     }
 
-    insertHTML(parent: HTMLElement, DOM: HTMLTreeNode) {
+    insertHTML(element: HTMLElement, nodeTree: HTMLTreeNode) {
         // for each child we add the attributes, add the innerText and add the children elements
-        DOM.children?.forEach((elem: HTMLTreeNode) => {
-            const element = document.createElement(elem.tag) as HTMLElement;
+        nodeTree.children?.forEach((node: HTMLTreeNode) => {
+            const newElement = document.createElement(node.tagName) as HTMLElement;
 
             // add attributes to this element
-            const attributes = elem.attributes as Record<string, string>;
+            const attributes = node.attributes as Record<string, string>;
             if(attributes != null){
                 for (const [key, value] of Object.entries(attributes)) {
-                    element.setAttribute(key, value);
+                    newElement.setAttribute(key, value);
                 }
             }
 
             // add innerText to this element
-            if(elem.innerText != null){
-                element.innerText = elem.innerText;
+            if(node.innerText != null){
+                newElement.innerText = node.innerText;
             }
 
             // add this (child) element to the parent in html
-            parent.appendChild(element);
+            element.appendChild(newElement);
 
             // run this method recursively for all children
-            this.insertHTML(element, elem);
+            this.insertHTML(newElement, node);
         });
     }
 }
