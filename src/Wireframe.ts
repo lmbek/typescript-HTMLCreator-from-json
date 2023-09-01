@@ -6,25 +6,19 @@ export class Wireframe {
     }
 
     insertHTML(parent: HTMLElement, DOM: HTMLTreeNode) {
-        // != null is equivalent to DOM.children?.forEach
-        if (DOM.children != null) {
-            DOM.children.forEach((elem: any) => {
-                const element = document.createElement(elem.tag) as HTMLElement;
-
-                if (elem.attributes != null) {
-                    const attributes = elem.attributes as Record<string, string>;
-                    for (const [key, value] of Object.entries(attributes)) {
-                        element.setAttribute(key, value);
-                    }
+        DOM.children?.forEach((elem: any) => {
+            const element = document.createElement(elem.tag) as HTMLElement;
+            const attributes = elem.attributes as Record<string, string>;
+            if(attributes != null){
+                for (const [key, value] of Object.entries(attributes)) {
+                    element.setAttribute(key, value);
                 }
-
-                if (elem.innerText != null) {
-                    element.innerText = elem.innerText;
-                }
-
-                parent.appendChild(element);
-                this.insertHTML(element, elem);
-            });
-        }
+            }
+            if(elem.innerText != null){
+                element.innerText = elem.innerText;
+            }
+            parent.appendChild(element);
+            this.insertHTML(element, elem);
+        });
     }
 }
